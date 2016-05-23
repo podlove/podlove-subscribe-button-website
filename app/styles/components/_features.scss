@@ -1,0 +1,23 @@
+.features {
+  margin: 0 auto;
+  padding-top: $layout-unit * 4;
+  max-width: 800px;
+}
+
+.features__list {
+  @extend %grid;
+
+  margin-bottom: $layout-unit * 4;
+}
+
+.features__list__item {
+  @extend %grid__item;
+  @extend %one-half;
+
+  margin-bottom: $layout-unit * 2;
+}
+
+.features__figure__image {
+  margin-bottom: $layout-unit / 2;
+  width: 100%;
+}

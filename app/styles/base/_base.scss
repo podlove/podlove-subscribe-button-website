@@ -1,0 +1,20 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+button,
+input,
+textarea {
+
+  &:active,
+  &:focus {
+    outline-color: $color-main;
+    outline-offset: 2px;
+    outline-style: solid;
+    outline-width: 2px;
+  }
+}

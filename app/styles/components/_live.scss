@@ -1,0 +1,28 @@
+.live {
+  margin: 0 auto;
+  padding-top: $layout-unit * 4;
+  max-width: 800px;
+}
+
+.live__button {
+  text-align: center;
+
+  margin: ($layout-unit * 4) auto;
+  width: 200px;
+  height: 240px;
+}
+
+.live__container {
+  @extend %grid;
+}
+
+.live__input {
+  @extend %grid__item;
+  @extend %three-twelfths;
+}
+
+.live__label {
+  font-weight: 900;
+
+  margin-bottom: $layout-unit;
+}

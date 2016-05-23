@@ -1,0 +1,28 @@
+.ressources {
+  color: #EFEFEF;
+
+  background-color: #121212;
+  padding: ($layout-unit * 6) 0;
+}
+
+.ressources__container {
+  @extend %grid__item;
+  @extend %one-half;
+
+  &:nth-child(2) {
+    text-align: right;
+  }
+}
+
+.ressources__links {
+  @extend %grid;
+}
+
+.ressources__list__item {
+  padding: ($layout-unit / 4) 0;
+}
+
+.ressources__wrapper {
+  margin: 0 auto;
+  max-width: 800px;
+}
