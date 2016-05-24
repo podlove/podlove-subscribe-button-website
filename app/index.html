@@ -106,17 +106,17 @@
         <div class="live__input">
           <p class="live__label">Size:</p>
           <form>
-            <input type="radio" name="size" value="small" checked> Small<br>
+            <input type="radio" name="size" value="small"> Small<br>
             <input type="radio" name="size" value="medium"> Medium<br>
-            <input type="radio" name="size" value="big"> Big
+            <input type="radio" name="size" value="big" checked> Big
           </form>
         </div>
         <div class="live__input">
           <p class="live__label">Format:</p>
           <form>
-            <input type="radio" name="format" value="rectangle" checked> Rectangle<br>
+            <input type="radio" name="format" value="rectangle"> Rectangle<br>
             <input type="radio" name="format" value="square"> Square<br>
-            <input type="radio" name="format" value="cover"> Cover
+            <input type="radio" name="format" value="cover" checked> Cover
           </form>
         </div>
         <div class="live__input">
@@ -130,12 +130,10 @@
         <div class="live__input">
           <p class="live__label">Color:</p>
           <form>
-            <input type="color" name="color" value="#000000">
+            <input type="color" name="color" id="color" value="#75ad91">
           </form>
         </div>
-        <div class="live__button">
-          <script class="podlove-subscribe-button" src="https://cdn.podlove.org/subscribe-button/javascripts/app.js" data-language="de" data-size="big" data-format="cover" data-json-data="podcastData" data-colors="red;green;blue"></script>
-        </div>
+        <div id="live-button" class="live__button"></div>
       </div>
     </section>
     <section class="ressources">
@@ -162,11 +160,11 @@
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="../bower_components/zepto/zepto.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
     <script>
       window.podcastData = {
         "title": "Newz of the World",
@@ -202,6 +200,7 @@
         ]
       }
     </script>
+    <script src="scripts/main.js"></script>
     <!-- endbuild -->
   </body>
 </html>
