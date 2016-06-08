@@ -10,25 +10,25 @@
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('../fonts/roboto_light/Roboto-Light-webfont.eot');
-  src: url('../fonts/roboto_light/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/roboto_light/Roboto-Light-webfont.woff2') format('woff2'),
-       url('../fonts/roboto_light/Roboto-Light-webfont.woff') format('woff'),
-       url('../fonts/roboto_light/Roboto-Light-webfont.ttf') format('truetype'),
-       url('../fonts/roboto_light/Roboto-Light-webfont.svg#robotolight') format('svg');
-  font-weight: 300;
+  font-family: 'Sourcesans';
+  src: url('../fonts/sourcesans_regular/sourcesanspro-regular-webfont.eot');
+  src: url('../fonts/sourcesans_regular/sourcesanspro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/sourcesans_regular/sourcesanspro-regular-webfont.woff2') format('woff2'),
+       url('../fonts/sourcesans_regular/sourcesanspro-regular-webfont.woff') format('woff'),
+       url('../fonts/sourcesans_regular/sourcesanspro-regular-webfont.ttf') format('truetype'),
+       url('../fonts/sourcesans_regular/sourcesanspro-regular-webfont.svg#robotolight') format('svg');
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('../fonts/roboto_medium/Roboto-Medium-webfont.eot');
-  src: url('../fonts/roboto_medium/Roboto-Medium-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/roboto_medium/Roboto-Medium-webfont.woff2') format('woff2'),
-       url('../fonts/roboto_medium/Roboto-Medium-webfont.woff') format('woff'),
-       url('../fonts/roboto_medium/Roboto-Medium-webfont.ttf') format('truetype'),
-       url('../fonts/roboto_medium/Roboto-Medium-webfont.svg#robotomedium') format('svg');
-  font-weight: 500;
+  font-family: 'Sourcesans';
+  src: url('../fonts/sourcesans_bold/sourcesanspro-bold-webfont.eot');
+  src: url('../fonts/sourcesans_bold/sourcesanspro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/sourcesans_bold/sourcesanspro-bold-webfont.woff2') format('woff2'),
+       url('../fonts/sourcesans_bold/sourcesanspro-bold-webfont.woff') format('woff'),
+       url('../fonts/sourcesans_bold/sourcesanspro-bold-webfont.ttf') format('truetype'),
+       url('../fonts/sourcesans_bold/sourcesanspro-bold-webfont.svg#robotomedium') format('svg');
+  font-weight: 700;
   font-style: normal;
 }

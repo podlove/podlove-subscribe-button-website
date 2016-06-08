@@ -1,8 +1,8 @@
 // Ratio and base variables
 $ratio: 1.2;
 $base: 1;
-$base-em: $base * 0.875em;
-$base-px: $base * 14px;
+$base-em: $base * 1em;
+$base-px: $base * 16px;
 
 // Scale step variables
 // Type scaling after http://type-scale.com/ with golden ratio
@@ -19,9 +19,10 @@ $ms9: $ratio * $ms8; /* 5.15952 */
 
 // Font- Styles Reset
 body {
-  font-family: 'Roboto', sans-serif;
+  color: $color-gray;
+  font-family: 'Sourcesans', sans-serif;
   font-size: $base-em * $ms0;
-  font-weight: 300;
+  font-weight: 400;
   line-height: $base * $ms2;
 
   @media (min-width: $mq-s) {
@@ -42,17 +43,19 @@ a {
 // Utility
 
 .typo-bold {
-  font-weight: 500;
+  color: $color-black;
+  font-weight: 700;
 }
 
 .typo-light {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 // Headlines
 
 .headline {
-  font-weight: 500;
+  color: $color-black;
+  font-weight: 700;
 }
 
 .headline--5 {

@@ -9,7 +9,7 @@ $(document).ready(function () {
     'data-json-data': 'podcastData',
     'data-language': 'de',
     'data-size': 'big',
-    'data-color': '#75ad91',
+    'data-color': '#469cd1',
     'data-format': 'cover',
     'data-style': 'filled'
   };

@@ -1,7 +1,5 @@
 .ressources {
-  color: #EFEFEF;
-
-  background-color: #121212;
+  background-color: $color-black;
   padding: ($layout-unit * 6) 0;
 }
 
@@ -14,11 +12,16 @@
   }
 }
 
+.ressources__headline {
+  color: $color-white;
+}
+
 .ressources__links {
   @extend %grid;
 }
 
 .ressources__list__item {
+  color: $color-white;
   padding: ($layout-unit / 4) 0;
 }
 
