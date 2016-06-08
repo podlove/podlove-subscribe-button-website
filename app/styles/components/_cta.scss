@@ -1,0 +1,19 @@
+.cta {
+  background-color: $color-main-alt;
+}
+
+.cta__btn {
+  display: inline-block;
+}
+
+.cta__headline {
+  color: $color-white;
+}
+
+.cta__wrapper {
+  text-align: center;
+
+  margin: 0 auto;
+  padding: ($layout-unit * 4) 0;
+  max-width: 900px;
+}

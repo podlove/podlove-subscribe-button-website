@@ -28,15 +28,22 @@
   }
 }
 
-.hero__headline {
-  @include text-shadow(3);
+.hero__btn {
+  display: inline-block;
+  margin-top: $layout-unit * 1.5;
+}
 
-  color: $color-white;
-  line-height: 1em;
-
+.hero__content {
   position: absolute;
   top: 50%;
   left: 50%;
 
   transform: translate(-50%, -50%);
+}
+
+.hero__headline {
+  @include text-shadow(3);
+
+  color: $color-white;
+  line-height: 1em;
 }
