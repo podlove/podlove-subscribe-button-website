@@ -1,14 +1,28 @@
 .ressources {
   background-color: $color-black;
-  padding: ($layout-unit * 6) 0;
+  padding: $layout-unit * 2;
+
+  @media screen and (min-width: $mq-s) {
+    padding: ($layout-unit * 4) ($layout-unit * 2);
+  }
 }
 
 .ressources__container {
   @extend %grid__item;
-  @extend %one-half;
+  @extend %m--one-half;
+  @extend %l--one-half;
+
+  text-align: center;
+
+  @media screen and (min-width: $mq-m) {
+    text-align: left;
+  }
 
   &:nth-child(2) {
-    text-align: right;
+
+    @media screen and (min-width: $mq-m) {
+      text-align: right;
+    }
   }
 }
 
@@ -27,5 +41,5 @@
 
 .ressources__wrapper {
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 1000px;
 }

@@ -1,15 +1,23 @@
 .live {
   margin: 0 auto;
-  padding-top: $layout-unit * 4;
+  padding: ($layout-unit * 4) $layout-unit 0 $layout-unit;
   max-width: 800px;
+
+  @media screen and (min-width: $mq-s) {
+    padding: ($layout-unit * 4) $layout-unit $layout-unit $layout-unit;
+  }
 }
 
 .live__button {
   text-align: center;
 
-  margin: ($layout-unit * 4) auto;
+  margin: ($layout-unit * 2) auto;
   width: 200px;
   height: 240px;
+
+  @media screen and (min-width: $mq-s) {
+    margin: ($layout-unit * 4) auto;
+  }
 }
 
 .live__container {
@@ -18,7 +26,16 @@
 
 .live__input {
   @extend %grid__item;
-  @extend %three-twelfths;
+  @extend %one-half;
+  @extend %s--three-twelfths;
+  @extend %m--three-twelfths;
+  @extend %l--three-twelfths;
+
+  margin-top: $layout-unit;
+
+  @media screen and (min-width: $mq-s) {
+    margin-top: 0;
+  }
 }
 
 .live__label {

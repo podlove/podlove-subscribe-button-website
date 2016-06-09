@@ -1,10 +1,16 @@
 .benefits {
   margin: 0 auto;
-  padding-top: $layout-unit * 4;
-  max-width: 900px;
+  padding: ($layout-unit) $layout-unit $layout-unit $layout-unit;
+  max-width: 1200px;
+
+  @media screen and (min-width: $mq-s) {
+    padding: ($layout-unit * 4) $layout-unit $layout-unit $layout-unit;
+  }
 }
 
 .benefits__headline {
+  line-height: 1.1em;
+
   margin-bottom: $layout-unit / 2;
 }
 
@@ -17,4 +23,10 @@
   @extend %s--one-third;
   @extend %m--one-third;
   @extend %l--one-third;
+
+  margin-top: $layout-unit * 2;
+
+  @media screen and (min-width: $mq-s) {
+    margin-top: 0;
+  }
 }
