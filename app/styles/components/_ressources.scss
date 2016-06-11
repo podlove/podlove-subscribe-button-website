@@ -26,6 +26,14 @@
   }
 }
 
+.ressources__copy {
+  color: $color-white;
+  font-size: 0.75em;
+  text-align: center;
+
+  margin-bottom: $layout-unit * 2;
+}
+
 .ressources__headline {
   color: $color-white;
 }
@@ -36,6 +44,7 @@
 
 .ressources__list__item {
   color: $color-white;
+  font-size: 0.75em;
   padding: ($layout-unit / 4) 0;
 }
 

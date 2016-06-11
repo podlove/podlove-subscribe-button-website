@@ -29,3 +29,13 @@
     @warn "Invalid $depth `#{$depth}` for mixin `text-shadow`.";
   }
 }
+
+@mixin clearfix() {
+
+  &:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+
+}

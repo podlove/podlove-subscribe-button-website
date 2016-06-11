@@ -1,3 +1,5 @@
+'use strict';
+
 // generated on 2016-05-07 using generator-webapp 2.0.0
 import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
@@ -7,6 +9,8 @@ import {stream as wiredep} from 'wiredep';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
+
+var ghPages = require('gulp-gh-pages');
 
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
@@ -156,6 +160,11 @@ gulp.task('wiredep', () => {
       ignorePath: /^(\.\.\/)*\.\./
     }))
     .pipe(gulp.dest('app'));
+});
+
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
 });
 
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {

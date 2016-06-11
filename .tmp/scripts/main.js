@@ -1,3 +1,4 @@
+/* globals $:false */
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
@@ -13,6 +14,24 @@ $(document).ready(function () {
     'data-format': 'cover',
     'data-style': 'filled'
   };
+
+  function generateScript(object) {
+    var script = document.createElement('script');
+
+    script.type = 'text/javascript';
+    script.src = 'https://cdn.podlove.org/subscribe-button/javascripts/app.js';
+    script.className = 'podlove-subscribe-button';
+
+    $.each(object, function (key, value) {
+      script.setAttribute(key, value);
+    });
+    return script;
+  }
+
+  function addButton() {
+    var script = generateScript(buttonConfig);
+    $button.html(script);
+  }
 
   function changeButtonStyle(style) {
     buttonConfig['data-style'] = style;
@@ -47,24 +66,6 @@ $(document).ready(function () {
     }
 
     return value;
-  }
-
-  function addButton() {
-    var script = generateScript(buttonConfig);
-    $button.html(script);
-  }
-
-  function generateScript(object) {
-    var script = document.createElement('script');
-
-    script.type = 'text/javascript';
-    script.src = 'https://cdn.podlove.org/subscribe-button/javascripts/app.js';
-    script.className = 'podlove-subscribe-button';
-
-    $.each(object, function (key, value) {
-      script.setAttribute(key, value);
-    });
-    return script;
   }
 
   function addColorListener() {

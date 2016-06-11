@@ -72,6 +72,7 @@ a {
 
 .headline--4 {
   font-size: $base-em * $ms1;
+  text-align: center;
 
   @media (min-width: $mq-s) {
     font-size: $base-em * $ms2;
