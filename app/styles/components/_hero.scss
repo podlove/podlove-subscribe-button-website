@@ -3,11 +3,6 @@
 
   background-color: $color-main;
   position: relative;
-  min-height: 300px;
-
-  @media screen and (min-width: $mq-s) {
-    height: 44vh;
-  }
 }
 
 .hero__btn {
@@ -23,18 +18,14 @@
   max-width: 1000px;
 
   @media screen and (min-width: $mq-s) {
-    padding: 0;
+    padding: ($layout-unit * 2);
   }
 }
 
 .hero__device {
-  width: 210px;
-  height: 369px;
-
-  @media screen and (min-width: $mq-s) {
-    width: 340px;
-    height: 600px;
-  }
+  width: 100%;
+  height: 0;
+  padding-bottom: 176%;
 }
 
 .hero__device-wrapper {
@@ -45,17 +36,17 @@
   @extend %l--one-third;
 
   display: none;
-  float: left;
   position: relative;
 
   @media screen and (min-width: $mq-xs) {
-    display: block;
+    display: inline-block;
   }
 }
 
 .hero__device__inner {
   background-repeat: no-repeat;
   background-size: contain;
+  margin-left: $layout-unit * 2;
   position: absolute;
 }
 
@@ -90,6 +81,10 @@
 }
 
 .hero__text {
+  padding: ($layout-unit * 2) 0;
+}
+
+.hero__text-wrapper {
   @extend %grid__item;
   @extend %xs--one-half;
   @extend %s--two-thirds;
@@ -98,9 +93,6 @@
 
   text-align: left;
 
+  margin-top: $layout-unit * 2;
   position: relative;
-
-  @media screen and (min-width: $mq-s) {
-    margin-top: $layout-unit * 9;
-  }
 }
