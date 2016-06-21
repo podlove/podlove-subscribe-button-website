@@ -1,6 +1,10 @@
 /* globals $:false */
 'use strict';
 
+// Todo: refactor event listener functions
+// Todo: write docs
+// Todo: write tests
+
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 
 $(document).ready(function () {
@@ -37,7 +41,7 @@ $(document).ready(function () {
   var $button = $('#live-button'),
       buttonConfig = {
     'data-json-data': 'podcastData',
-    'data-language': 'de',
+    'data-language': 'en',
     'data-size': 'big',
     'data-color': '#469cd1',
     'data-format': 'cover',
@@ -74,6 +78,11 @@ $(document).ready(function () {
 
   function changeButtonFormat(format) {
     buttonConfig['data-format'] = format;
+    addButton();
+  }
+
+  function changeButtonLanguage(language) {
+    buttonConfig['data-language'] = language;
     addButton();
   }
 
@@ -115,6 +124,15 @@ $(document).ready(function () {
     });
   }
 
+  function addLanguageListener() {
+    var $languageInput = $('#language');
+
+    $languageInput.on('change', function (e) {
+      var language = eventTargetHandler(e);
+      changeButtonLanguage(language);
+    });
+  }
+
   function addSizeListener() {
     var $sizeInput = $('input[name=size]');
 
@@ -138,6 +156,7 @@ $(document).ready(function () {
     addColorListener();
     addStyleListener();
     addFormatListener();
+    addLanguageListener();
     addSizeListener();
   }
 
