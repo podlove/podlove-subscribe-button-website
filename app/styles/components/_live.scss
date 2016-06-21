@@ -44,3 +44,21 @@
 
   margin-bottom: $layout-unit;
 }
+
+.live__label--big-top {
+  margin-top: $layout-unit;
+}
+
+.live__label--small-bottom {
+  margin-bottom: $layout-unit / 2;
+}
+
+.live__select {
+  color: $color-gray;
+
+  background-color: transparent;
+  width: 100%;
+  height: $layout-unit * 1.5;
+}
+
+.live__select__option {}
