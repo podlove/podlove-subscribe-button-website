@@ -26,3 +26,13 @@ textarea {
     outline-width: 2px;
   }
 }
+
+.podlove {
+  background-image: url('../images/podlove-powered-by.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  margin: $layout-unit * 2 auto;
+  width: 200px;
+  height: 60px;
+}

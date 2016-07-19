@@ -79,7 +79,17 @@
   line-height: 1em;
   text-align: left;
 
-  margin-bottom: $layout-unit;
+  margin-bottom: $layout-unit / 2;
+}
+
+.hero__icon {
+  background-image: url('../images/podlove-subscribe-icon.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  margin-bottom: $layout-unit / 2;
+  width: 30px;
+  height: 48px;
 }
 
 .hero__teaser {
@@ -99,6 +109,6 @@
 
   text-align: left;
 
-  margin-top: $layout-unit * 2;
+  margin-top: $layout-unit * 2.5;
   position: relative;
 }
