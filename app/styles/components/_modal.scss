@@ -1,0 +1,23 @@
+.modal {
+  background-color: rgba(22, 22, 22, 0.4);
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: opacity 0.275s $podlove-easing;
+}
+
+.modal__frame {
+  @include box-shadow(2);
+
+  background-color: $color-white;
+  overflow-y: scroll;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px; // make responsive
+  height: 800px; // make responsive
+}

@@ -48,7 +48,10 @@ $( document ).ready( function () {
       'data-color': '#469cd1',
       'data-format': 'cover',
       'data-style': 'filled'
-    };
+    },
+    $generatorModal = $( '#generator-modal' ),
+    $generatorSubmit = $( '#generator-submit' ),
+    $openGeneratorButton = $( '#generator-open' );
 
   function generateScript ( object ) {
     var script = document.createElement( 'script' );
@@ -108,6 +111,32 @@ $( document ).ready( function () {
     return value;
   }
 
+  function closeGeneratorModal () {
+    // Todo: animate and hide
+  }
+
+  function handleGeneratorSubmit () {
+    var $title = '',
+      $subtitle = '',
+      $description = '',
+      $pathToCover = '';
+
+    $title = $( '#podcast-title' ).val();
+    $subtitle = $( '#podcast-subtitle' ).val();
+    $description = $( '#podcast-description' ).val();
+    $pathToCover = $( '#podcast-cover' ).val();
+
+    console.log($title, $subtitle, $description, $pathToCover);
+  }
+
+  function initForms () {
+    // $( 'select' ).material_select();
+  }
+
+  function openGeneratorModal () {
+    // Todo: show and animate
+  }
+
   function addColorListener () {
     var $colorInput = $( '#color' );
 
@@ -135,6 +164,20 @@ $( document ).ready( function () {
     } );
   }
 
+  function addModalListener () {
+    $generatorModal.on( 'click', function () {
+      closeGeneratorModal();
+    } );
+
+    $openGeneratorButton.on( 'click', function () {
+      openGeneratorModal();
+    } );
+
+    $generatorSubmit.on( 'click', function () {
+      handleGeneratorSubmit();
+    } );
+  }
+
   function addSizeListener () {
     var $sizeInput = $( 'input[name=size]' );
 
@@ -159,7 +202,11 @@ $( document ).ready( function () {
     addStyleListener();
     addFormatListener();
     addLanguageListener();
+    addModalListener();
     addSizeListener();
+    initForms();
+    $( 'html' ).css( 'overflow', 'hidden' );
+    $( 'body' ).css( 'overflow', 'hidden' );
   }
 
   init();

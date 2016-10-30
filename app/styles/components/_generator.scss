@@ -1,0 +1,22 @@
+.generator__article {
+  padding: ($layout-unit * 3) ($layout-unit * 2);
+}
+
+.generator__article__headline {
+  margin-bottom: $layout-unit;
+}
+
+.generator__creation {
+  padding: 0 ($layout-unit * 2)($layout-unit * 3) ($layout-unit * 2);
+}
+
+.generator__form {
+  padding: 0 ($layout-unit * 2)($layout-unit * 3) ($layout-unit * 2);
+}
+
+.generator__form__select {
+  display: inline-block;
+  margin-right: $layout-unit;
+  margin-bottom: $layout-unit;
+  width: $layout-unit * 5;
+}

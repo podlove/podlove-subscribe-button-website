@@ -57,7 +57,7 @@
           <div class="hero__text">
             <span class="hero__icon"></span><h1 class="headline headline--2 hero__headline">PODLOVE SUBSCRIBE BUTTON</h1>
             <h2 class="hero__teaser">A universal and easy-to-use button, to subscribe to podcasts<br>with player clients or website players.</h2>
-            <a href="https://github.com/podlove/podlove-subscribe-button" target="_blank" class="btn btn--light hero__btn">Download at GitHub</a>
+            <button id="generator-open" class="btn btn--light hero__btn">Download at GitHub</button>
           </div>
         </div>
       </div>
@@ -209,14 +209,79 @@
       </div>
     </section>
     <a class="podlove" target="_blank" href="http://podlove.org/"></a>
-
+    <section id="generator-modal" class="modal">
+      <div class="modal__frame">
+        <section class="generator">
+          <article class="generator__article">
+            <h2 class="headline headline--4 generator__article__headline">Placeholder Headline: What can you do here?</h2>
+            <p class="generator__article__copy">Placeholder Copy: Explain what a user has to do here, to achieve what?</p>
+          </article>
+          <form id="generator-form" class="generator__form" action="">
+            <div class="input-field">
+              <input placeholder="Placeholder" id="podcast-title" type="text" class="validate">
+              <label for="podcast-title">Podcast Title</label>
+            </div>
+            <div class="input-field">
+              <input placeholder="Placeholder" id="podcast-subtitle" type="text" class="validate">
+              <label for="podcast-subtitle">Podcast Subtitle</label>
+            </div>
+            <div class="input-field">
+              <textarea id="podcast-description" class="materialize-textarea" length="120"></textarea>
+              <label for="podcast-description">Podcast Description</label>
+            </div>
+            <div class="input-field">
+              <input placeholder="Placeholder" id="podcast-cover" type="text" class="validate">
+              <label for="podcast-cover">Path to Podcast Cover</label>
+            </div>
+            <h3 class="headline headline--5 generator__form__headline">Feeds:</h3>
+            <div class="generator__form__select">
+              <label>Type:</label>
+              <select id="podcast-feed-type" class="generator__form__select__field browser-default">
+                <option value="1">Audio</option>
+                <option value="2">Video</option>
+              </select>
+            </div>
+            <div class="generator__form__select">
+              <label>Format:</label>
+              <select id="podcast-feed-format" class="generator__form__select__field browser-default">
+                <option value="1">MP3</option>
+                <option value="2">AAC</option>
+                <option value="2">OGG</option>
+                <option value="2">Opus</option>
+              </select>
+            </div>
+            <div class="generator__form__select">
+              <label>Variant:</label>
+              <select id="podcast-feed-variant" class="generator__form__select__field browser-default">
+                <option value="1">High</option>
+                <option value="2">Low</option>
+              </select>
+            </div>
+            <div class="input-field">
+              <input placeholder="Placeholder" id="podcast-feed-path" type="text" class="validate">
+              <label for="podcast-cover">Path to Podcast Feed</label>
+            </div>
+            <button id="generator-add-feed" class="btn">Add another feed</button>
+            <button id="generator-submit" class="btn">Create Script</button>
+          </form>
+          <div class="generator__creation">
+            <h3 class="headline headline--5 generator__form__headline">Your Script:</h3>
+            <div class="input-field">
+              <textarea id="podcast-script-creation" class="materialize-textarea"></textarea>
+            </div>
+            <p>Placeholder What to do with the Script? How to embed it? How to change it?</p>
+          </div>
+        </section>
+      </div>
+    </section>
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="../bower_components/zepto/zepto.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->
+    <script src="scripts/vendor/jquery.min.js"></script>
+    <script src="scripts/vendor/materialize.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
   </body>
