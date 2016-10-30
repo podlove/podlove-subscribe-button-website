@@ -16,7 +16,7 @@
   height: 240px;
 
   @media screen and (min-width: $mq-s) {
-    margin: ($layout-unit * 4) auto;
+    margin: ($layout-unit * 4) auto 0 auto;
   }
 }
 
@@ -62,3 +62,13 @@
 }
 
 .live__select__option {}
+
+.live__wrapper {
+
+  @include box-shadow(1);
+
+  background-color: $color-white;
+  margin: 0 auto ($layout-unit * 2) auto;
+  padding: ($layout-unit * 2);
+  max-width: 800px;
+}

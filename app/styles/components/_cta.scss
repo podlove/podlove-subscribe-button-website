@@ -1,5 +1,6 @@
 .cta {
   background-color: $color-main-alt;
+  padding: $layout-unit * 3;
 }
 
 .cta__btn {
@@ -14,6 +15,5 @@
   text-align: center;
 
   margin: 0 auto;
-  padding: ($layout-unit * 4) 0;
   max-width: 900px;
 }

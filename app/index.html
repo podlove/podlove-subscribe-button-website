@@ -57,7 +57,7 @@
           <div class="hero__text">
             <span class="hero__icon"></span><h1 class="headline headline--2 hero__headline">PODLOVE SUBSCRIBE BUTTON</h1>
             <h2 class="hero__teaser">A universal and easy-to-use button, to subscribe to podcasts<br>with player clients or website players.</h2>
-            <button id="generator-open" class="btn btn--light hero__btn">Download at GitHub</button>
+            <a href="#generator" class="btn btn--light hero__btn">Download at GitHub</a>
           </div>
         </div>
       </div>
@@ -131,95 +131,116 @@
         </li>
       </ul>
     </section>
-    <section class="cta">
+    <section id="generator" class="cta">
       <div class="cta__wrapper">
         <h2 class="headline headline--2 cta__headline">Give it a try, it’s free!</h2>
-        <a href="https://github.com/podlove/podlove-subscribe-button" target="_blank" class="btn btn--light hero__btn">Download at GitHub</a>
+      </div>
+      <div class="live__wrapper">
+        <div class="live__container">
+          <div class="live__input">
+            <p class="live__label">Size:</p>
+            <form>
+              <p>
+                <input id="live-radio-size-small" class="with-gap" type="radio" name="size" value="small" />
+                <label for="live-radio-size-small">Small</label>
+              </p>
+              <p>
+                <input id="live-radio-size-medium" class="with-gap" type="radio" name="size" value="medium" />
+                <label for="live-radio-size-medium">Medium</label>
+              </p>
+              <p>
+                <input id="live-radio-size-big" class="with-gap" type="radio" name="size" value="big" checked />
+                <label for="live-radio-size-big">Big</label>
+              </p>
+            </form>
+          </div>
+          <div class="live__input">
+            <p class="live__label">Format:</p>
+            <form>
+              <p>
+                <input id="live-radio-format-rectangle" class="with-gap" type="radio" name="format" value="rectangle" />
+                <label for="live-radio-format-rectangle">Rectangle</label>
+              </p>
+              <p>
+                <input id="live-radio-format-square" class="with-gap" type="radio" name="format" value="square" />
+                <label for="live-radio-format-square">Square</label>
+              </p>
+              <p>
+                <input id="live-radio-format-cover" class="with-gap" type="radio" name="format" value="cover" checked />
+                <label for="live-radio-format-rectangle-cover">Cover</label>
+              </p>
+            </form>
+          </div>
+          <div class="live__input">
+            <p class="live__label">Style:</p>
+            <form>
+              <p>
+                <input id="live-radio-style-filled" class="with-gap" type="radio" name="style" value="filled" checked />
+                <label for="live-radio-style-filled">Filled</label>
+              </p>
+              <p>
+                <input id="live-radio-style-outline" class="with-gap" type="radio" name="style" value="outline" />
+                <label for="live-radio-style-outline">Outline</label>
+              </p>
+              <p>
+                <input id="live-radio-style-frameless" class="with-gap" type="radio" name="style" value="frameless" />
+                <label for="live-radio-style-frameless">Frameless</label>
+              </p>
+            </form>
+          </div>
+          <div class="live__input">
+            <p class="live__label live__label--small-bottom">Color:</p>
+            <form>
+              <input type="color" name="color" id="color" value="#469cd1">
+            </form>
+            <p class="live__label live__label--small-bottom live__label--big-top">Language:</p>
+            <form>
+              <select class="live__select browser-default" name="language" id="language">
+                <!--<option class="live__select__option" value="zh">Chinese</option>-->
+                <option class="live__select__option" value="nl">Dutch</option>
+                <option class="live__select__option" value="en" selected>English</option>
+                <option class="live__select__option" value="eo">Esperanto</option>
+                <option class="live__select__option" value="de">German</option>
+                <option class="live__select__option" value="fi">Finnish</option>
+                <option class="live__select__option" value="fr">French</option>
+                <!--<option class="live__select__option" value="ja">Japanese</option>-->
+              </select>
+            </form>
+          </div>
+          <div id="live-button" class="live__button"></div>
+          <div class="generator__info">
+            <p>Use this button on your own website by adding some HTML to your source code: First, customize the styling, then open the subscribe button generator and fill out your podcast information. The generator will create the code, you can use on your website to add the Podlove Subscribe Button.</p>
+            <button id="generator-open" class="btn btn--red generator__btn">Open Generator</button>
+          </div>
+        </div>
       </div>
     </section>
-    <section class="live">
-      <h2 class="headline headline--2">Test it!</h2>
-      <div class="live__container">
-        <div class="live__input">
-          <p class="live__label">Size:</p>
-          <form>
-            <p>
-              <input id="live-radio-size-small" class="with-gap" type="radio" name="size" value="small" />
-              <label for="live-radio-size-small">Small</label>
-            </p>
-            <p>
-              <input id="live-radio-size-medium" class="with-gap" type="radio" name="size" value="medium" />
-              <label for="live-radio-size-medium">Medium</label>
-            </p>
-            <p>
-              <input id="live-radio-size-big" class="with-gap" type="radio" name="size" value="big" checked />
-              <label for="live-radio-size-big">Big</label>
-            </p>
-          </form>
+    <section class="ressources">
+      <div class="ressources__wrapper">
+        <h2 class="headline headline--4 ressources__headline">Links and Support</h2>
+        <p class="ressources__copy">A project of the Podlove initiative</p>
+        <div class="ressources__links">
+          <div class="ressources__container">
+            <ul class="ressources__list">
+              <li class="ressources__list__item"><a href="https://github.com/podlove/podlove-subscribe-button">PODLOVE SUBSCRIBE BUTTON Code on GitHub</a></li>
+              <li class="ressources__list__item"><a href="http://podlove.org/podlove-subscribe-button/">Detailed Feature Description on metaebene.de</a></li>
+              <li class="ressources__list__item"><a href="https://wordpress.org/plugins/podlove-subscribe-button/">PODLOVE SUBSCRIBE BUTTON WordPress Plugin</a></li>
+            </ul>
+          </div>
+          <div class="ressources__container">
+            <ul class="ressources__list">
+              <li class="ressources__list__item"><a href="https://github.com/podlove/podlove-subscribe-button/issues">Report bugs and request features on GitHub</a></li>
+              <li class="ressources__list__item"><a href="https://github.com/podlove/podlove-subscribe-button#usage">Documentation on GitHub</a></li>
+              <li class="ressources__list__item"><a href="https://podlove.oneskyapp.com/collaboration/project?id=14564">Help us translate the button</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="live__input">
-          <p class="live__label">Format:</p>
-          <form>
-            <p>
-              <input id="live-radio-format-rectangle" class="with-gap" type="radio" name="format" value="rectangle" />
-              <label for="live-radio-format-rectangle">Rectangle</label>
-            </p>
-            <p>
-              <input id="live-radio-format-square" class="with-gap" type="radio" name="format" value="square" />
-              <label for="live-radio-format-square">Square</label>
-            </p>
-            <p>
-              <input id="live-radio-format-cover" class="with-gap" type="radio" name="format" value="cover" checked />
-              <label for="live-radio-format-rectangle-cover">Cover</label>
-            </p>
-          </form>
-        </div>
-        <div class="live__input">
-          <p class="live__label">Style:</p>
-          <form>
-            <p>
-              <input id="live-radio-style-filled" class="with-gap" type="radio" name="style" value="filled" checked />
-              <label for="live-radio-style-filled">Filled</label>
-            </p>
-            <p>
-              <input id="live-radio-style-outline" class="with-gap" type="radio" name="style" value="outline" />
-              <label for="live-radio-style-outline">Outline</label>
-            </p>
-            <p>
-              <input id="live-radio-style-frameless" class="with-gap" type="radio" name="style" value="frameless" />
-              <label for="live-radio-style-frameless">Frameless</label>
-            </p>
-          </form>
-        </div>
-        <div class="live__input">
-          <p class="live__label live__label--small-bottom">Color:</p>
-          <form>
-            <input type="color" name="color" id="color" value="#469cd1">
-          </form>
-          <p class="live__label live__label--small-bottom live__label--big-top">Language:</p>
-          <form>
-            <select class="live__select browser-default" name="language" id="language">
-              <!--<option class="live__select__option" value="zh">Chinese</option>-->
-              <option class="live__select__option" value="nl">Dutch</option>
-              <option class="live__select__option" value="en" selected>English</option>
-              <option class="live__select__option" value="eo">Esperanto</option>
-              <option class="live__select__option" value="de">German</option>
-              <option class="live__select__option" value="fi">Finnish</option>
-              <option class="live__select__option" value="fr">French</option>
-              <!--<option class="live__select__option" value="ja">Japanese</option>-->
-            </select>
-          </form>
-        </div>
-        <div id="live-button" class="live__button"></div>
       </div>
     </section>
-    <section id="generator-modal" class="">
-      <div class="">
+    <a class="podlove" target="_blank" href="http://podlove.org/"></a>
+    <section id="generator-modal" class="modal">
+      <div class="modal__frame">
         <section class="generator">
-          <!-- <article class="generator__article">
-            <h2 class="headline headline--4 generator__article__headline">Placeholder Headline: What can you do here?</h2>
-            <p class="generator__article__copy">Placeholder Copy: Explain what a user has to do here, to achieve what?</p>
-          </article> -->
           <form id="generator-form" class="generator__form" action="">
             <div class="input-field">
               <input placeholder="Placeholder" id="podcast-title" type="text" class="validate">
@@ -280,29 +301,6 @@
         </section>
       </div>
     </section>
-    <section class="ressources">
-      <div class="ressources__wrapper">
-        <h2 class="headline headline--4 ressources__headline">Links and Support</h2>
-        <p class="ressources__copy">A project of the Podlove initiative</p>
-        <div class="ressources__links">
-          <div class="ressources__container">
-            <ul class="ressources__list">
-              <li class="ressources__list__item"><a href="https://github.com/podlove/podlove-subscribe-button">PODLOVE SUBSCRIBE BUTTON Code on GitHub</a></li>
-              <li class="ressources__list__item"><a href="http://podlove.org/podlove-subscribe-button/">Detailed Feature Description on metaebene.de</a></li>
-              <li class="ressources__list__item"><a href="https://wordpress.org/plugins/podlove-subscribe-button/">PODLOVE SUBSCRIBE BUTTON WordPress Plugin</a></li>
-            </ul>
-          </div>
-          <div class="ressources__container">
-            <ul class="ressources__list">
-              <li class="ressources__list__item"><a href="https://github.com/podlove/podlove-subscribe-button/issues">Report bugs and request features on GitHub</a></li>
-              <li class="ressources__list__item"><a href="https://github.com/podlove/podlove-subscribe-button#usage">Documentation on GitHub</a></li>
-              <li class="ressources__list__item"><a href="https://podlove.oneskyapp.com/collaboration/project?id=14564">Help us translate the button</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <a class="podlove" target="_blank" href="http://podlove.org/"></a>
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <!-- endbower -->

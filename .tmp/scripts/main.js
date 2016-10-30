@@ -131,7 +131,12 @@ $( document ).ready( function () {
   }
 
   function closeGeneratorModal () {
-    // Todo: animate and hide
+    $( 'html' ).css( 'overflow', 'auto' );
+    $( 'body' ).css( 'overflow', 'auto' );
+    $generatorModal.removeClass( 'modal--styled' );
+    window.setTimeout( function () {
+      $generatorModal.removeClass( 'modal--visible' );
+    }, 1000 );
   }
 
   function generateFeedObjectString (type, format, variant, path) {
@@ -195,7 +200,12 @@ $( document ).ready( function () {
   }
 
   function openGeneratorModal () {
-    // Todo: show and animate
+    $( 'html' ).css( 'overflow', 'hidden' );
+    $( 'body' ).css( 'overflow', 'hidden' );
+    $generatorModal.addClass( 'modal--visible' );
+    window.setTimeout( function () {
+      $generatorModal.addClass( 'modal--styled' );
+    }, 100 );
   }
 
   function addColorListener () {
@@ -237,6 +247,12 @@ $( document ).ready( function () {
     $generatorSubmit.on( 'click', function ( e ) {
       handleGeneratorSubmit( e );
     } );
+
+    $( document ).on( 'keyup', function ( e ) {
+      if (e.keyCode === 27 ) {
+        closeGeneratorModal();
+      }
+    });
   }
 
   function addSizeListener () {
@@ -266,8 +282,6 @@ $( document ).ready( function () {
     addModalListener();
     addSizeListener();
     initForms();
-    // $( 'html' ).css( 'overflow', 'hidden' );
-    // $( 'body' ).css( 'overflow', 'hidden' );
   }
 
   init();

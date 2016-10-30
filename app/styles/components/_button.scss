@@ -5,6 +5,7 @@
 
   background-color: transparent;
   border: 3px solid $color-black;
+  cursor: pointer;
   padding: 0.6em 1.1em 0.6em;
 
   transition: opacity 0.35s $podlove-easing;
@@ -25,5 +26,16 @@
   &:active,
   &:hover {
     color: $color-white;
+  }
+}
+
+.btn--red {
+  color: $color-main-alt;
+
+  border-color: $color-main-alt;
+
+  &:active,
+  &:hover {
+    color: $color-main-alt;
   }
 }
