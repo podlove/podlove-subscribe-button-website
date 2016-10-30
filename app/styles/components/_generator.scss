@@ -36,6 +36,10 @@
   padding-bottom: $layout-unit;
 }
 
+.generator__form__label {
+  left: 0;
+}
+
 .generator__form__select {
   display: inline-block;
   margin-right: $layout-unit;
