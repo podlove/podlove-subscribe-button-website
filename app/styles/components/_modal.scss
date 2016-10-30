@@ -1,0 +1,32 @@
+.modal {
+  background-color: rgba(22, 22, 22, 0.4);
+  display: none;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: opacity 0.5s $podlove-easing;
+}
+
+.modal--visible {
+  display: block;
+  opacity: 0;
+}
+
+.modal--styled {
+  opacity: 1;
+}
+
+.modal__frame {
+  @include box-shadow(2);
+
+  background-color: $color-white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px; // make responsive
+  height: 800px; // make responsive
+}

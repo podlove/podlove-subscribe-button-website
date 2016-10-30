@@ -20,10 +20,9 @@ textarea {
 
   &:active,
   &:focus {
-    outline-color: $color-main;
-    outline-offset: 2px;
-    outline-style: solid;
-    outline-width: 2px;
+    outline-color: transparent;
+    outline-offset: 0;
+    outline-width: 0;
   }
 }
 
