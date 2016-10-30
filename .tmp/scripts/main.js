@@ -115,18 +115,26 @@ $( document ).ready( function () {
     // Todo: animate and hide
   }
 
-  function handleGeneratorSubmit () {
-    var $title = '',
-      $subtitle = '',
-      $description = '',
-      $pathToCover = '';
+  function handleGeneratorSubmit ( e ) {
+    var title = '',
+      subtitle = '',
+      description = '',
+      pathToCover = '',
+      jsonObject = {};
 
-    $title = $( '#podcast-title' ).val();
-    $subtitle = $( '#podcast-subtitle' ).val();
-    $description = $( '#podcast-description' ).val();
-    $pathToCover = $( '#podcast-cover' ).val();
+    title = $( '#podcast-title' ).val();
+    subtitle = $( '#podcast-subtitle' ).val();
+    description = $( '#podcast-description' ).val();
+    pathToCover = $( '#podcast-cover' ).val();
 
-    console.log($title, $subtitle, $description, $pathToCover);
+    e.preventDefault();
+
+    jsonObject.title = title;
+    jsonObject.subtitle = subtitle;
+    jsonObject.description = description;
+    jsonObject.cover = pathToCover;
+
+    console.log(JSON.stringify(jsonObject));
   }
 
   function initForms () {
@@ -173,8 +181,8 @@ $( document ).ready( function () {
       openGeneratorModal();
     } );
 
-    $generatorSubmit.on( 'click', function () {
-      handleGeneratorSubmit();
+    $generatorSubmit.on( 'click', function ( e ) {
+      handleGeneratorSubmit( e );
     } );
   }
 
