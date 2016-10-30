@@ -96,6 +96,25 @@ $( document ).ready( function () {
     addButton();
   }
 
+  function createScriptElement () {
+    var color = '',
+      format = '',
+      language = '',
+      scriptElement = '',
+      size = '',
+      style = '';
+
+    color = $('#color').val();
+    format = $('input[name=format]:checked').val();
+    language = $('input[name=language]:checked').val();
+    size = $('input[name=size]:checked').val();
+    style = $('input[name=style]:checked').val();
+
+    scriptElement = '<script class="podlove-subscribe-button" src="http://example.com/subscribe-button/javascripts/app.js" data-language="' + language + '" data-size="' + size + '" data-json-data="podcastData" data-color="' + color + '" data-format="' + format + '" data-style="' + style + '"></script>';
+
+    return scriptElement;
+  }
+
   function eventTargetHandler ( e ) {
     var target, value;
 
@@ -115,26 +134,60 @@ $( document ).ready( function () {
     // Todo: animate and hide
   }
 
+  function generateFeedObjectString (type, format, variant, path) {
+    var feedObject = {};
+
+    feedObject.type = type;
+    feedObject.format = format;
+    feedObject.variant = variant;
+    feedObject.path = path;
+
+    return feedObject;
+  }
+
   function handleGeneratorSubmit ( e ) {
     var title = '',
       subtitle = '',
       description = '',
       pathToCover = '',
-      jsonObject = {};
+      jsonObject = {},
+      feeds = [],
+      feedsArray = [],
+      generatedString = '',
+      generatedScriptElement = '',
+      $outputElement = $( '#podcast-script-creation' );
+
+    e.preventDefault();
 
     title = $( '#podcast-title' ).val();
     subtitle = $( '#podcast-subtitle' ).val();
     description = $( '#podcast-description' ).val();
     pathToCover = $( '#podcast-cover' ).val();
 
-    e.preventDefault();
+    feeds = $( '.generator__form__feed' );
+
+    for ( var i = 0, max = feeds.length; i < max; i += 1 ) {
+      feedsArray[ i ] = generateFeedObjectString(
+        $( '#podcast-feed-' + i + '-type').val(),
+        $( '#podcast-feed-' + i + '-format').val(),
+        $( '#podcast-feed-' + i + '-variant').val(),
+        $( '#podcast-feed-' + i + '-path').val()
+      );
+    }
 
     jsonObject.title = title;
     jsonObject.subtitle = subtitle;
     jsonObject.description = description;
     jsonObject.cover = pathToCover;
+    jsonObject.feeds = feedsArray;
 
-    console.log(JSON.stringify(jsonObject));
+    generatedScriptElement = createScriptElement();
+
+    generatedString = '<script>window.podcastData=' + JSON.stringify(jsonObject) + '</script>' + generatedScriptElement + '<noscript><a href="' + feedsArray[ 0 ].path + '">Subscribe to feed</a></noscript>';
+
+    console.log(generatedString);
+
+    $outputElement.val(generatedString);
   }
 
   function initForms () {
@@ -213,8 +266,8 @@ $( document ).ready( function () {
     addModalListener();
     addSizeListener();
     initForms();
-    $( 'html' ).css( 'overflow', 'hidden' );
-    $( 'body' ).css( 'overflow', 'hidden' );
+    // $( 'html' ).css( 'overflow', 'hidden' );
+    // $( 'body' ).css( 'overflow', 'hidden' );
   }
 
   init();

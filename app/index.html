@@ -143,25 +143,52 @@
         <div class="live__input">
           <p class="live__label">Size:</p>
           <form>
-            <input type="radio" name="size" value="small"> Small<br>
-            <input type="radio" name="size" value="medium"> Medium<br>
-            <input type="radio" name="size" value="big" checked> Big
+            <p>
+              <input id="live-radio-size-small" class="with-gap" type="radio" name="size" value="small" />
+              <label for="live-radio-size-small">Small</label>
+            </p>
+            <p>
+              <input id="live-radio-size-medium" class="with-gap" type="radio" name="size" value="medium" />
+              <label for="live-radio-size-medium">Medium</label>
+            </p>
+            <p>
+              <input id="live-radio-size-big" class="with-gap" type="radio" name="size" value="big" checked />
+              <label for="live-radio-size-big">Big</label>
+            </p>
           </form>
         </div>
         <div class="live__input">
           <p class="live__label">Format:</p>
           <form>
-            <input type="radio" name="format" value="rectangle"> Rectangle<br>
-            <input type="radio" name="format" value="square"> Square<br>
-            <input type="radio" name="format" value="cover" checked> Cover
+            <p>
+              <input id="live-radio-format-rectangle" class="with-gap" type="radio" name="format" value="rectangle" />
+              <label for="live-radio-format-rectangle">Rectangle</label>
+            </p>
+            <p>
+              <input id="live-radio-format-square" class="with-gap" type="radio" name="format" value="square" />
+              <label for="live-radio-format-square">Square</label>
+            </p>
+            <p>
+              <input id="live-radio-format-cover" class="with-gap" type="radio" name="format" value="cover" checked />
+              <label for="live-radio-format-rectangle-cover">Cover</label>
+            </p>
           </form>
         </div>
         <div class="live__input">
           <p class="live__label">Style:</p>
           <form>
-            <input type="radio" name="style" value="filled" checked> Filled<br>
-            <input type="radio" name="style" value="outline"> Outline<br>
-            <input type="radio" name="style" value="frameless"> Frameless
+            <p>
+              <input id="live-radio-style-filled" class="with-gap" type="radio" name="style" value="filled" checked />
+              <label for="live-radio-style-filled">Filled</label>
+            </p>
+            <p>
+              <input id="live-radio-style-outline" class="with-gap" type="radio" name="style" value="outline" />
+              <label for="live-radio-style-outline">Outline</label>
+            </p>
+            <p>
+              <input id="live-radio-style-frameless" class="with-gap" type="radio" name="style" value="frameless" />
+              <label for="live-radio-style-frameless">Frameless</label>
+            </p>
           </form>
         </div>
         <div class="live__input">
@@ -171,7 +198,7 @@
           </form>
           <p class="live__label live__label--small-bottom live__label--big-top">Language:</p>
           <form>
-            <select class="live__select" name="language" id="language">
+            <select class="live__select browser-default" name="language" id="language">
               <!--<option class="live__select__option" value="zh">Chinese</option>-->
               <option class="live__select__option" value="nl">Dutch</option>
               <option class="live__select__option" value="en" selected>English</option>
@@ -184,6 +211,73 @@
           </form>
         </div>
         <div id="live-button" class="live__button"></div>
+      </div>
+    </section>
+    <section id="generator-modal" class="">
+      <div class="">
+        <section class="generator">
+          <!-- <article class="generator__article">
+            <h2 class="headline headline--4 generator__article__headline">Placeholder Headline: What can you do here?</h2>
+            <p class="generator__article__copy">Placeholder Copy: Explain what a user has to do here, to achieve what?</p>
+          </article> -->
+          <form id="generator-form" class="generator__form" action="">
+            <div class="input-field">
+              <input placeholder="Placeholder" id="podcast-title" type="text" class="validate">
+              <label for="podcast-title">Podcast Title</label>
+            </div>
+            <div class="input-field">
+              <input placeholder="Placeholder" id="podcast-subtitle" type="text" class="validate">
+              <label for="podcast-subtitle">Podcast Subtitle</label>
+            </div>
+            <div class="input-field">
+              <textarea id="podcast-description" class="materialize-textarea" length="120"></textarea>
+              <label for="podcast-description">Podcast Description</label>
+            </div>
+            <div class="input-field">
+              <input placeholder="Placeholder" id="podcast-cover" type="text" class="validate">
+              <label for="podcast-cover">Path to Podcast Cover</label>
+            </div>
+            <h3 class="headline headline--5 generator__form__headline">Feeds:</h3>
+            <div id="podcast-feed-0" class="generator__form__feed">
+              <div class="generator__form__select">
+                <label>Type:</label>
+                <select id="podcast-feed-0-type" class="generator__form__select__field browser-default">
+                  <option value="audio">Audio</option>
+                  <option value="video">Video</option>
+                </select>
+              </div>
+              <div class="generator__form__select">
+                <label>Format:</label>
+                <select id="podcast-feed-0-format" class="generator__form__select__field browser-default">
+                  <option value="mp3">MP3</option>
+                  <option value="aac">AAC</option>
+                  <option value="ogg">OGG</option>
+                  <option value="opus">Opus</option>
+                </select>
+              </div>
+              <div class="generator__form__select">
+                <label>Variant:</label>
+                <select id="podcast-feed-0-variant" class="generator__form__select__field browser-default">
+                  <option value="high">High</option>
+                  <option value="low">Low</option>
+                </select>
+              </div>
+              <div class="input-field">
+                <input placeholder="Placeholder" id="podcast-feed-0-path" type="text" class="validate">
+                <label for="podcast-cover">Path to Podcast Feed</label>
+              </div>
+            </div>
+            <button id="generator-add-feed" class="btn">Add another feed</button>
+            <button id="generator-submit" class="btn">Create Script</button>
+          </form>
+          <div class="generator__creation">
+            <h3 class="headline headline--5 generator__form__headline">Your Script:</h3>
+            <div class="input-field">
+              <textarea id="podcast-script-creation" class="materialize-textarea"></textarea>
+            </div>
+            <p>Placeholder What to do with the Script? How to embed it? How to change it?</p>
+          </div>
+        </section>
       </div>
     </section>
     <section class="ressources">
@@ -209,71 +303,6 @@
       </div>
     </section>
     <a class="podlove" target="_blank" href="http://podlove.org/"></a>
-    <section id="generator-modal" class="modal">
-      <div class="modal__frame">
-        <section class="generator">
-          <article class="generator__article">
-            <h2 class="headline headline--4 generator__article__headline">Placeholder Headline: What can you do here?</h2>
-            <p class="generator__article__copy">Placeholder Copy: Explain what a user has to do here, to achieve what?</p>
-          </article>
-          <form id="generator-form" class="generator__form" action="">
-            <div class="input-field">
-              <input placeholder="Placeholder" id="podcast-title" type="text" class="validate">
-              <label for="podcast-title">Podcast Title</label>
-            </div>
-            <div class="input-field">
-              <input placeholder="Placeholder" id="podcast-subtitle" type="text" class="validate">
-              <label for="podcast-subtitle">Podcast Subtitle</label>
-            </div>
-            <div class="input-field">
-              <textarea id="podcast-description" class="materialize-textarea" length="120"></textarea>
-              <label for="podcast-description">Podcast Description</label>
-            </div>
-            <div class="input-field">
-              <input placeholder="Placeholder" id="podcast-cover" type="text" class="validate">
-              <label for="podcast-cover">Path to Podcast Cover</label>
-            </div>
-            <h3 class="headline headline--5 generator__form__headline">Feeds:</h3>
-            <div class="generator__form__select">
-              <label>Type:</label>
-              <select id="podcast-feed-type" class="generator__form__select__field browser-default">
-                <option value="1">Audio</option>
-                <option value="2">Video</option>
-              </select>
-            </div>
-            <div class="generator__form__select">
-              <label>Format:</label>
-              <select id="podcast-feed-format" class="generator__form__select__field browser-default">
-                <option value="1">MP3</option>
-                <option value="2">AAC</option>
-                <option value="2">OGG</option>
-                <option value="2">Opus</option>
-              </select>
-            </div>
-            <div class="generator__form__select">
-              <label>Variant:</label>
-              <select id="podcast-feed-variant" class="generator__form__select__field browser-default">
-                <option value="1">High</option>
-                <option value="2">Low</option>
-              </select>
-            </div>
-            <div class="input-field">
-              <input placeholder="Placeholder" id="podcast-feed-path" type="text" class="validate">
-              <label for="podcast-cover">Path to Podcast Feed</label>
-            </div>
-            <button id="generator-add-feed" class="btn">Add another feed</button>
-            <button id="generator-submit" class="btn">Create Script</button>
-          </form>
-          <div class="generator__creation">
-            <h3 class="headline headline--5 generator__form__headline">Your Script:</h3>
-            <div class="input-field">
-              <textarea id="podcast-script-creation" class="materialize-textarea"></textarea>
-            </div>
-            <p>Placeholder What to do with the Script? How to embed it? How to change it?</p>
-          </div>
-        </section>
-      </div>
-    </section>
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <!-- endbower -->
