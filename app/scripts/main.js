@@ -49,6 +49,7 @@ $( document ).ready( function () {
       'data-format': 'cover',
       'data-style': 'filled'
     },
+    $generatorAddFeed = $( '#generator-add-feed' ),
     $generatorModal = $( '#generator-modal' ),
     $generatorSubmit = $( '#generator-submit' ),
     $openGeneratorButton = $( '#generator-open' );
@@ -69,6 +70,14 @@ $( document ).ready( function () {
   function addButton () {
     var script = generateScript( buttonConfig );
     $button.html( script );
+  }
+
+  function addFeedInputFields ( e ) {
+    var feeds = $( '.generator__form__feed' ),
+      feedsCount = feeds.length;
+
+    e.preventDefault();
+    $( '#podcast-feed-0' ).clone().attr( 'id', 'podcast-feed-' + feedsCount ).insertAfter( '#podcast-feed-' + ( feedsCount - 1 ) );
   }
 
   function changeButtonStyle ( style ) {
@@ -190,10 +199,9 @@ $( document ).ready( function () {
 
     generatedString = '<script>window.podcastData=' + JSON.stringify(jsonObject) + '</script>' + generatedScriptElement + '<noscript><a href="' + feedsArray[ 0 ].path + '">Subscribe to feed</a></noscript>';
 
-    console.log(generatedString);
-
     $outputElement.val(generatedString);
     $outputElement.trigger('autoresize');
+    $outputElement.select();
   }
 
   function initForms () {
@@ -256,6 +264,10 @@ $( document ).ready( function () {
         closeGeneratorModal();
       }
     });
+
+    $generatorAddFeed.on( 'click', function ( e ) {
+      addFeedInputFields( e );
+    } );
   }
 
   function addSizeListener () {

@@ -21,7 +21,11 @@
   color: $color-black;
   font-weight: 900;
 
-  padding-top: $layout-unit;
+  padding-top: $layout-unit * 2;
+}
+
+.generator__form__feed {
+  padding-bottom: $layout-unit;
 }
 
 .generator__form__select {
@@ -29,6 +33,10 @@
   margin-right: $layout-unit;
   margin-bottom: $layout-unit;
   width: $layout-unit * 5;
+}
+
+.generator__form__submit-container {
+  padding-top: $layout-unit * 2;
 }
 
 .generator__header {
@@ -53,4 +61,8 @@
   text-align: center;
 
   margin: ($layout-unit * 2) 0 0 0;
+}
+
+.generator__result {
+  font-family: monospace;
 }

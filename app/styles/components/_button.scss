@@ -18,6 +18,17 @@
   }
 }
 
+.btn--gray {
+  color: $color-gray;
+
+  border-color: $color-gray;
+
+  &:active,
+  &:hover {
+    color: $color-gray;
+  }
+}
+
 .btn--light {
   color: $color-white;
 
@@ -37,5 +48,25 @@
   &:active,
   &:hover {
     color: $color-main-alt;
+  }
+}
+
+.btn--submit {
+
+  &.btn--red {
+    @include box-shadow(2);
+
+    color: $color-white;
+
+    background-color: $color-main-alt;
+
+    &:hover {
+      background-color: $color-main-alt;
+      transform: translateY(1px);
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
   }
 }

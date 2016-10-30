@@ -244,19 +244,19 @@
         <section class="generator">
           <form id="generator-form" class="generator__form" action="">
             <div class="input-field">
-              <input placeholder="Placeholder" id="podcast-title" type="text" class="validate">
+              <input placeholder="Placeholder" id="podcast-title" type="text" class="validate" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
               <label for="podcast-title">Podcast Title</label>
             </div>
             <div class="input-field">
-              <input placeholder="Placeholder" id="podcast-subtitle" type="text" class="validate">
+              <input placeholder="Placeholder" id="podcast-subtitle" type="text" class="validate" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
               <label for="podcast-subtitle">Podcast Subtitle</label>
             </div>
             <div class="input-field">
-              <input id="podcast-description" placeholder="Placeholder" type="text" class="validate">
+              <input id="podcast-description" placeholder="Placeholder" type="text" class="validate" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
               <label for="podcast-description">Podcast Description</label>
             </div>
             <div class="input-field">
-              <input placeholder="Placeholder" id="podcast-cover" type="text" class="validate">
+              <input placeholder="Placeholder" id="podcast-cover" type="text" class="validate" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
               <label for="podcast-cover">Path to Podcast Cover</label>
             </div>
             <p class="generator__form__divider">Feeds:</p>
@@ -285,17 +285,19 @@
                 </select>
               </div>
               <div class="input-field">
-                <input placeholder="Placeholder" id="podcast-feed-0-path" type="text" class="validate">
+                <input placeholder="Placeholder" id="podcast-feed-0-path" type="text" class="validate" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
                 <label for="podcast-cover">Path to Podcast Feed</label>
               </div>
             </div>
-            <button id="generator-add-feed" class="btn">Add another feed</button>
-            <button id="generator-submit" class="btn">Create Script</button>
+            <button id="generator-add-feed" class="btn btn--gray">Add another feed</button>
+            <p class="generator__form__submit-container">
+              <button id="generator-submit" class="btn btn--red btn--submit">Create Script</button>
+            </p>
           </form>
           <div class="generator__creation">
             <h3 class="headline headline--5 generator__form__headline">Your Script:</h3>
             <div class="input-field">
-              <textarea id="podcast-script-creation" class="materialize-textarea" rows="15"></textarea>
+              <textarea id="podcast-script-creation" class="materialize-textarea generator__result" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
             </div>
             <p>Placeholder What to do with the Script? How to embed it? How to change it?</p>
           </div>
