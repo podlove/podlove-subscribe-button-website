@@ -239,7 +239,8 @@
     </section>
     <a class="podlove" target="_blank" href="http://podlove.org/"></a>
     <section id="generator-modal" class="modal">
-      <div class="modal__frame">
+      <div id="generator-modal-frame" class="modal__frame">
+        <p class="generator__header">Finish your button configuration</p>
         <section class="generator">
           <form id="generator-form" class="generator__form" action="">
             <div class="input-field">
@@ -251,14 +252,14 @@
               <label for="podcast-subtitle">Podcast Subtitle</label>
             </div>
             <div class="input-field">
-              <textarea id="podcast-description" class="materialize-textarea" length="120"></textarea>
+              <input id="podcast-description" placeholder="Placeholder" type="text" class="validate">
               <label for="podcast-description">Podcast Description</label>
             </div>
             <div class="input-field">
               <input placeholder="Placeholder" id="podcast-cover" type="text" class="validate">
               <label for="podcast-cover">Path to Podcast Cover</label>
             </div>
-            <h3 class="headline headline--5 generator__form__headline">Feeds:</h3>
+            <p class="generator__form__divider">Feeds:</p>
             <div id="podcast-feed-0" class="generator__form__feed">
               <div class="generator__form__select">
                 <label>Type:</label>
@@ -294,7 +295,7 @@
           <div class="generator__creation">
             <h3 class="headline headline--5 generator__form__headline">Your Script:</h3>
             <div class="input-field">
-              <textarea id="podcast-script-creation" class="materialize-textarea"></textarea>
+              <textarea id="podcast-script-creation" class="materialize-textarea" rows="15"></textarea>
             </div>
             <p>Placeholder What to do with the Script? How to embed it? How to change it?</p>
           </div>

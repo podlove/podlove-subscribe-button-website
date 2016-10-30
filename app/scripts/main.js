@@ -193,6 +193,7 @@ $( document ).ready( function () {
     console.log(generatedString);
 
     $outputElement.val(generatedString);
+    $outputElement.trigger('autoresize');
   }
 
   function initForms () {
@@ -238,6 +239,8 @@ $( document ).ready( function () {
   function addModalListener () {
     $generatorModal.on( 'click', function () {
       closeGeneratorModal();
+    } ).children().on( 'click', function ( e ) {
+      e.stopPropagation();
     } );
 
     $openGeneratorButton.on( 'click', function () {

@@ -1,6 +1,8 @@
 .generator {
   margin: 0 auto;
-  max-width: 600px;
+  padding-top: $layout-unit * 5;
+  overflow-y: scroll;
+  max-height: 100%;
 }
 
 .generator__btn {
@@ -15,11 +17,34 @@
   padding: 0 ($layout-unit * 2)($layout-unit * 3) ($layout-unit * 2);
 }
 
+.generator__form__divider {
+  color: $color-black;
+  font-weight: 900;
+
+  padding-top: $layout-unit;
+}
+
 .generator__form__select {
   display: inline-block;
   margin-right: $layout-unit;
   margin-bottom: $layout-unit;
   width: $layout-unit * 5;
+}
+
+.generator__header {
+  @include box-shadow(1);
+
+  color: $color-black;
+  font-weight: 900;
+  text-align: center;
+
+  background-color: $color-white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: $layout-unit ($layout-unit * 2);
+  z-index: 1;
 }
 
 .generator__info {
