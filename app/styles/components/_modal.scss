@@ -27,6 +27,8 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 600px; // make responsive
+  width: 100%;
+  max-width: 600px;
   height: 800px; // make responsive
+  max-height: 100%;
 }

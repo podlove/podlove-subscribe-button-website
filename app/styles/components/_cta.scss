@@ -1,6 +1,10 @@
 .cta {
   background-color: $color-main-alt;
-  padding: $layout-unit * 3;
+  padding: ($layout-unit * 3) ($layout-unit / 2);
+
+  @media screen and (min-width: $mq-xs) {
+    padding: $layout-unit * 3;
+  }
 }
 
 .cta__btn {

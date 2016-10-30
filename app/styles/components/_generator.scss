@@ -10,11 +10,19 @@
 }
 
 .generator__creation {
-  padding: 0 ($layout-unit * 2)($layout-unit * 3) ($layout-unit * 2);
+  padding: 0 $layout-unit ($layout-unit * 2) $layout-unit;
+
+  @media screen and (min-width: $mq-s) {
+    padding: 0 ($layout-unit * 2) ($layout-unit * 3) ($layout-unit * 2);
+  }
 }
 
 .generator__form {
-  padding: 0 ($layout-unit * 2)($layout-unit * 3) ($layout-unit * 2);
+  padding: 0 $layout-unit ($layout-unit * 2) $layout-unit;
+
+  @media screen and (min-width: $mq-s) {
+    padding: 0 ($layout-unit * 2) ($layout-unit * 3) ($layout-unit * 2);
+  }
 }
 
 .generator__form__divider {
