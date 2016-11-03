@@ -67,9 +67,34 @@ $( document ).ready( function () {
     return script;
   }
 
+  function updateButtonInfo () {
+    var $iframe = $button.find( 'iframe' ),
+      $widthElement = $( '#live-info-width' ),
+      width = null,
+      $heightElement = $( '#live-info-height' ),
+      height = null;
+
+    // to prevent info from showing false values while iframe is loading and resizing
+    if ( !$iframe.width() || $iframe.width() > 200 ) {
+      setTimeout( function () {
+        updateButtonInfo();
+      }, 2000 );
+      return;
+    }
+
+    width = $iframe.width() + 'px';
+    height = $iframe.height() + 'px';
+
+    $widthElement.text( width );
+    $heightElement.text( height );
+  }
+
   function addButton () {
     var script = generateScript( buttonConfig );
     $button.html( script );
+    setTimeout( function () {
+      updateButtonInfo();
+    }, 1200 );
   }
 
   function addFeedInputFields ( e ) {

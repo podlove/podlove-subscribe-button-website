@@ -35,6 +35,12 @@
   margin-top: $layout-unit * 2;
 }
 
+.live__info {
+  @extend %grid__item;
+
+  text-align: center;
+}
+
 .live__input {
   @extend %grid__item;
   @extend %one-half;
