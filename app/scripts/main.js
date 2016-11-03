@@ -178,12 +178,11 @@ $( document ).ready( function () {
     }, 1000 );
   }
 
-  function generateFeedObjectString (type, format, variant, path) {
+  function generateFeedObjectString (type, format, path) {
     var feedObject = {};
 
     feedObject.type = type;
     feedObject.format = format;
-    feedObject.variant = variant;
     feedObject.path = path;
 
     return feedObject;
@@ -214,7 +213,6 @@ $( document ).ready( function () {
       feedsArray[ i ] = generateFeedObjectString(
         $( '#podcast-feed-' + i + '-type').val(),
         $( '#podcast-feed-' + i + '-format').val(),
-        $( '#podcast-feed-' + i + '-variant').val(),
         $( '#podcast-feed-' + i + '-path').val()
       );
     }
