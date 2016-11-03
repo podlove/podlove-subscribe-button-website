@@ -95,6 +95,11 @@ $( document ).ready( function () {
     addButton();
   }
 
+  function changeButtonImage ( image ) {
+    window.podcastData.cover = image;
+    addButton();
+  }
+
   function changeButtonLanguage ( language ) {
     buttonConfig[ 'data-language' ] = language;
     addButton();
@@ -235,6 +240,15 @@ $( document ).ready( function () {
     } );
   }
 
+  function addImageListener () {
+    var $imageInput = $( 'input[name=podcast-cover]' );
+
+    $imageInput.focusout( function ( e ) {
+      var image = eventTargetHandler( e );
+      changeButtonImage( image );
+    } );
+  }
+
   function addLanguageListener () {
     var $languageInput = $( '#language' );
 
@@ -293,6 +307,7 @@ $( document ).ready( function () {
     addColorListener();
     addStyleListener();
     addFormatListener();
+    addImageListener();
     addLanguageListener();
     addModalListener();
     addSizeListener();

@@ -17,7 +17,7 @@
   height: 240px;
 
   @media screen and (min-width: $mq-s) {
-    margin: ($layout-unit * 4) auto 0 auto;
+    margin: ($layout-unit * 2) auto 0 auto;
   }
 }
 
@@ -27,6 +27,12 @@
 
 .live__headline {
   margin-bottom: $layout-unit * 2;
+}
+
+.live__image-url {
+  @extend %grid__item;
+
+  margin-top: $layout-unit * 2;
 }
 
 .live__input {
