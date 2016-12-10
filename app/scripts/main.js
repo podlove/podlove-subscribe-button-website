@@ -99,10 +99,15 @@ $( document ).ready( function () {
 
   function addFeedInputFields ( e ) {
     var feeds = $( '.generator__form__feed' ),
-      feedsCount = feeds.length;
-
+      feedsCount = feeds.length,
+      $newFormElement;
+    console.log(feedsCount);
     e.preventDefault();
-    $( '#podcast-feed-0' ).clone().attr( 'id', 'podcast-feed-' + feedsCount ).insertAfter( '#podcast-feed-' + ( feedsCount - 1 ) );
+    $newFormElement = $( '#podcast-feed-0' ).clone().attr( 'id', 'podcast-feed-' + feedsCount ).insertAfter( '#podcast-feed-' + ( feedsCount - 1 ) );
+    // rename children
+    $newFormElement.find( '.generator__form__select__field--type-js' ).attr( 'id', 'podcast-feed-' + feedsCount + '-type' );
+    $newFormElement.find( '.generator__form__select__field--format-js' ).attr( 'id', 'podcast-feed-' + feedsCount + '-format' );
+    $newFormElement.find( '.generator__form__input--path-js' ).attr( 'id', 'podcast-feed-' + feedsCount + '-path' );
   }
 
   function changeButtonStyle ( style ) {
@@ -208,13 +213,13 @@ $( document ).ready( function () {
     pathToCover = $( '#podcast-cover' ).val();
 
     feeds = $( '.generator__form__feed' );
-
     for ( var i = 0, max = feeds.length; i < max; i += 1 ) {
       feedsArray[ i ] = generateFeedObjectString(
         $( '#podcast-feed-' + i + '-type').val(),
         $( '#podcast-feed-' + i + '-format').val(),
         $( '#podcast-feed-' + i + '-path').val()
       );
+      console.log('feeeds', feedsArray);
     }
 
     jsonObject.title = title;
