@@ -1,0 +1,33 @@
+.options {
+  @extend %grid;
+  color: $color-white;
+
+  margin: ($layout-unit * 2) 0;
+}
+
+.options__headline {
+  color: $color-white;
+}
+
+.options__item {
+  @extend %grid__item;
+  @extend %s--one-third;
+  @extend %m--one-third;
+  @extend %l--one-third;
+
+  text-align: left;
+
+  margin-bottom: $layout-unit * 2;
+
+  @media screen and (min-width: $mq-s) {
+    margin-bottom: 0;
+  }
+}
+
+.options__link {
+
+  &:hover,
+  &:focus {
+    color: lighten($color-main-alt, 20);
+  }
+}
