@@ -150,10 +150,10 @@ $( document ).ready( function () {
 
     color = $('#color').val();
     format = $('input[name=format]:checked').val();
-    language = $('input[name=language]:checked').val();
+    language = $('.live__select__option:selected').val();
     size = $('input[name=size]:checked').val();
     style = $('input[name=style]:checked').val();
-
+    console.log(language);
     scriptElement = '<script class="podlove-subscribe-button" src="http://example.com/subscribe-button/javascripts/app.js" data-language="' + language + '" data-size="' + size + '" data-json-data="podcastData" data-color="' + color + '" data-format="' + format + '" data-style="' + style + '"></script>';
 
     return scriptElement;
@@ -219,7 +219,6 @@ $( document ).ready( function () {
         $( '#podcast-feed-' + i + '-format').val(),
         $( '#podcast-feed-' + i + '-path').val()
       );
-      console.log('feeeds', feedsArray);
     }
 
     jsonObject.title = title;
