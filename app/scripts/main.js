@@ -52,7 +52,8 @@ $( document ).ready( function () {
     $generatorAddFeed = $( '#generator-add-feed' ),
     $generatorModal = $( '#generator-modal' ),
     $generatorSubmit = $( '#generator-submit' ),
-    $openGeneratorButton = $( '#generator-open' );
+    $openGeneratorButton = $( '#generator-open' ),
+    $generatorClipboardButton = $( '#generator-copy-clipboard' );
 
   function generateScript ( object ) {
     var script = document.createElement( 'script' );
@@ -181,6 +182,24 @@ $( document ).ready( function () {
     window.setTimeout( function () {
       $generatorModal.removeClass( 'modal--visible' );
     }, 1000 );
+  }
+
+  function copyToClipboard ( e ) {
+    var target = e.target,
+      copyTarget = target.dataset.copytarget,
+      input = ( copyTarget ? document.querySelector( copyTarget ) : null );
+
+    if ( input && input.select ) {
+      input.select();
+
+      try {
+        document.execCommand( 'copy' );
+        input.blur();
+      } catch ( err ) {
+        alert( 'Please press Ctrl/Cmd+C to copy.' );
+      }
+
+    }
   }
 
   function generateFeedObjectString (type, format, path) {
@@ -329,6 +348,12 @@ $( document ).ready( function () {
     } );
   }
 
+  function addCopyToClipboardListener () {
+    $generatorClipboardButton.on( 'click', function ( e ) {
+      copyToClipboard( e );
+    } );
+  }
+
   function init () {
     addButton( 'red' );
     addColorListener();
@@ -338,6 +363,7 @@ $( document ).ready( function () {
     addLanguageListener();
     addModalListener();
     addSizeListener();
+    addCopyToClipboardListener();
     initForms();
   }
 

@@ -9,6 +9,10 @@
   margin: $layout-unit auto 0 auto;
 }
 
+.generator__btn--copy {
+  margin: 0 auto ($layout-unit * 2) auto;
+}
+
 .generator__creation {
   padding: 0 $layout-unit ($layout-unit * 2) $layout-unit;
 
