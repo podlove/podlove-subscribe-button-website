@@ -187,13 +187,15 @@ $( document ).ready( function () {
   function copyToClipboard ( e ) {
     var target = e.target,
       copyTarget = target.dataset.copytarget,
-      input = ( copyTarget ? document.querySelector( copyTarget ) : null );
+      input = ( copyTarget ? document.querySelector( copyTarget ) : null ),
+      $message = $( '#generator-copy-message-success');
 
     if ( input && input.select ) {
       input.select();
 
       try {
         document.execCommand( 'copy' );
+        $message.addClass( 'generator__copy-message--visible' );
       } catch ( err ) {
         alert( 'Please press Ctrl/Cmd+C to copy.' );
       }

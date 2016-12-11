@@ -79,6 +79,17 @@
   margin: ($layout-unit * 2) 0 0 0;
 }
 
+.generator__copy-message {
+  display: inline-block;
+  margin-left: $layout-unit;
+  transform: scale(0);
+  transition: transform $podlove-easing 0.125s;
+}
+
+.generator__copy-message--visible {
+  transform: scale(1);
+}
+
 .generator__result {
   font-family: monospace;
 }
