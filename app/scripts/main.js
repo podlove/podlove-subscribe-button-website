@@ -194,7 +194,6 @@ $( document ).ready( function () {
 
       try {
         document.execCommand( 'copy' );
-        input.blur();
       } catch ( err ) {
         alert( 'Please press Ctrl/Cmd+C to copy.' );
       }
