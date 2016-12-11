@@ -146,7 +146,6 @@ $( document ).ready( function () {
       language = '',
       scriptElement = '',
       size = '',
-      src = '',
       style = '';
 
     color = $('#color').val();
@@ -154,9 +153,8 @@ $( document ).ready( function () {
     language = $('.live__select__option:selected').val();
     size = $('input[name=size]:checked').val();
     style = $('input[name=style]:checked').val();
-    src = $('#podcast-scriptsrc').val();
 
-    scriptElement = '<script class="podlove-subscribe-button" src="' + src + '" data-language="' + language + '" data-size="' + size + '" data-json-data="podcastData" data-color="' + color + '" data-format="' + format + '" data-style="' + style + '"></script>';
+    scriptElement = '<script class="podlove-subscribe-button" src="https://cdn.podlove.org/subscribe-button/javascripts/app.js" data-language="' + language + '" data-size="' + size + '" data-json-data="podcastData" data-color="' + color + '" data-format="' + format + '" data-style="' + style + '"></script>';
 
     return scriptElement;
   }
