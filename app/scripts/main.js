@@ -7,35 +7,20 @@
 $( document ).ready( function () {
 
   window.podcastData = {
-    'title': 'Newz of the World',
-    'subtitle': 'Tim and Mark talk about the Newz™',
-    'description': 'Newz of the World is a weekly show about world news. Mark Fonseca Rendeiro and Tim Pritlove come together to present interesting reports and discuss their aspects and possible consequences. Newz of the world wants to be an alternative window to the common media flow and cherry picks interesting developments for you.',
-    'cover': 'https://meta.metaebene.me/media/newz/newz-logo-600x600.jpg',
+    'title': 'Podlove Test Feed',
+    'subtitle': 'Use this for testing purposes only',
+    'description': 'This feed is just for testing and might go away anytime. It includes all major markup and is a paged feed too.',
+    'cover': 'https://meta.metaebene.me/media/podlove/podlove-logo-2.0-512x512.jpg',
     'feeds': [
       {
         'type': 'audio',
-        'format': 'mp3',
-        'url': 'http://newz-of-the-world.com/feed/mp3',
-        'variant': 'high'
+        'url': 'http://v4-feed-test.podlove.org/feed/',
+        'format': '0'
       },
       {
         'type': 'audio',
-        'format': 'aac',
-        'url': 'http://newz-of-the-world.com/feed/mp4',
-        'variant': 'high',
-        'directory-url-itunes': 'https://itunes.apple.com/de/podcast/newz-of-the-world/id492588543'
-      },
-      {
-        'type': 'audio',
-        'format': 'ogg',
-        'url': 'http://newz-of-the-world.com/feed/ogg',
-        'variant': 'high'
-      },
-      {
-        'type': 'audio',
-        'format': 'opus',
-        'url': 'http://newz-of-the-world.com/feed/opus',
-        'variant': 'high'
+        'url': 'http://v4-feed-test.podlove.org/feed/',
+        'format': 'mp3'
       }
     ]
   };
