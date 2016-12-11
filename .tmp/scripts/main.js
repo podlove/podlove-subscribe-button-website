@@ -223,7 +223,9 @@ $( document ).ready( function () {
       feedsArray = [],
       generatedString = '',
       generatedScriptElement = '',
-      $outputElement = $( '#podcast-script-creation' );
+      $outputElement = $( '#podcast-script-creation' ),
+      $buttonCreated = $( '#generator-subscribe-button-creation' ),
+      $creation = $( '#generator-creation' );
 
     e.preventDefault();
 
@@ -251,9 +253,11 @@ $( document ).ready( function () {
 
     generatedString = '<script>window.podcastData=' + JSON.stringify(jsonObject) + '</script>' + generatedScriptElement + '<noscript><a href="' + feedsArray[ 0 ].path + '">Subscribe to feed</a></noscript>';
 
+    $creation.addClass( 'generator__creation--visible' );
     $outputElement.val(generatedString);
     $outputElement.trigger('autoresize');
     $outputElement.select();
+    $buttonCreated.html(generatedString);
   }
 
   function initForms () {

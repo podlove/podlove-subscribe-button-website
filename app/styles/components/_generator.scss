@@ -14,11 +14,16 @@
 }
 
 .generator__creation {
+  display: none;
   padding: 0 $layout-unit ($layout-unit * 2) $layout-unit;
 
   @media screen and (min-width: $mq-s) {
     padding: 0 ($layout-unit * 2) ($layout-unit * 3) ($layout-unit * 2);
   }
+}
+
+.generator__creation--visible {
+  display: block;
 }
 
 .generator__form {

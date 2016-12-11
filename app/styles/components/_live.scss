@@ -21,6 +21,11 @@
   }
 }
 
+.live__button--created {
+  margin: 0 0 ($layout-unit * 2) 0;
+  transform: translateX(0);
+}
+
 .live__container {
   @extend %grid;
 }
