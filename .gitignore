@@ -1,2 +1,5 @@
 .idea/PODLOVE_SUBSCRIBE_BUTTON_PAGE.iml
 .idea/libraries/PODLOVE_SUBSCRIBE_BUTTON_PAGE_node_modules.xml
+
+node_modules
+.tmp
