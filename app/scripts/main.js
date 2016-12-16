@@ -188,12 +188,12 @@ $( document ).ready( function () {
     }
   }
 
-  function generateFeedObjectString (type, format, path) {
+  function generateFeedObjectString (type, format, url) {
     var feedObject = {};
 
     feedObject.type = type;
     feedObject.format = format;
-    feedObject.path = path;
+    feedObject.url = url;
 
     return feedObject;
   }
@@ -236,7 +236,7 @@ $( document ).ready( function () {
 
     generatedScriptElement = createScriptElement();
 
-    generatedString = '<script>window.podcastData=' + JSON.stringify(jsonObject) + '</script>' + generatedScriptElement + '<noscript><a href="' + feedsArray[ 0 ].path + '">Subscribe to feed</a></noscript>';
+    generatedString = '<script>window.podcastData=' + JSON.stringify(jsonObject) + '</script>' + generatedScriptElement + '<noscript><a href="' + feedsArray[ 0 ].url + '">Subscribe to feed</a></noscript>';
 
     $creation.addClass( 'generator__creation--visible' );
     $outputElement.val(generatedString);
