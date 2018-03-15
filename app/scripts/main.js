@@ -94,6 +94,7 @@ $( document ).ready( function () {
     $newFormElement.find( '.generator__form__select__field--type-js' ).attr( 'id', 'podcast-feed-' + feedsCount + '-type' );
     $newFormElement.find( '.generator__form__select__field--format-js' ).attr( 'id', 'podcast-feed-' + feedsCount + '-format' );
     $newFormElement.find( '.generator__form__input--path-js' ).attr( 'id', 'podcast-feed-' + feedsCount + '-path' );
+    $newFormElement.find( '.generator__form__input--itunes-js' ).attr( 'id', 'podcast-feed-' + feedsCount + '-itunes' );
   }
 
   function changeButtonStyle ( style ) {
@@ -188,12 +189,15 @@ $( document ).ready( function () {
     }
   }
 
-  function generateFeedObjectString (type, format, url) {
+  function generateFeedObjectString (type, format, url, itunes) {
     var feedObject = {};
 
     feedObject.type = type;
     feedObject.format = format;
     feedObject.url = url;
+    if ( itunes ) {
+      feedObject['directory-url-itunes'] = itunes;
+    }
 
     return feedObject;
   }
@@ -224,7 +228,8 @@ $( document ).ready( function () {
       feedsArray[ i ] = generateFeedObjectString(
         $( '#podcast-feed-' + i + '-type').val(),
         $( '#podcast-feed-' + i + '-format').val(),
-        $( '#podcast-feed-' + i + '-path').val()
+        $( '#podcast-feed-' + i + '-path').val(),
+        $( '#podcast-feed-' + i + '-itunes' ).val()
       );
     }
 
